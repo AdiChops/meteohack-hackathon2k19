@@ -7,7 +7,7 @@ let shuffle = function (myArray) {
     }
     return myArray;
 };
-fetch("sample_questions.json")
+fetch("../data/sample_questions.json")
     .then(data => {
         return data.json();
     })
