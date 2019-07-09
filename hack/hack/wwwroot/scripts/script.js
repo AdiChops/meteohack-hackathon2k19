@@ -15,6 +15,7 @@ fetch("../data/sample_questions.json")
         console.log(data);
         let questions = shuffle(data["questions"]);
         for (let i of questions) {
+            document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;
             if (i["question_type"] == "M") {
                 let answers = i["answers"];
                 console.log(answers);
