@@ -2,7 +2,7 @@
 ---
 The fun educational trivia game.
 
-## Question Type
+## Question Types
 ---
 There are three types of questions:
     - Short answers: These are questions with which you need to write an answer (denoted as `question-type` "S" in the JSON file).
