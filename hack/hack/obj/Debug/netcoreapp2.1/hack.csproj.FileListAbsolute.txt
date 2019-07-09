@@ -1,0 +1,13 @@
+C:\Users\irvineb\source\repos\hack\hack\bin\Debug\netcoreapp2.1\hack.deps.json
+C:\Users\irvineb\source\repos\hack\hack\bin\Debug\netcoreapp2.1\hack.runtimeconfig.json
+C:\Users\irvineb\source\repos\hack\hack\bin\Debug\netcoreapp2.1\hack.runtimeconfig.dev.json
+C:\Users\irvineb\source\repos\hack\hack\bin\Debug\netcoreapp2.1\hack.dll
+C:\Users\irvineb\source\repos\hack\hack\bin\Debug\netcoreapp2.1\hack.pdb
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.csproj.CoreCompileInputs.cache
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.RazorAssemblyInfo.cache
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.RazorAssemblyInfo.cs
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.AssemblyInfoInputs.cache
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.AssemblyInfo.cs
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.RazorTargetAssemblyInfo.cache
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.dll
+C:\Users\irvineb\source\repos\hack\hack\obj\Debug\netcoreapp2.1\hack.pdb
