@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel = "stylesheet" type = "text/css" href = "styles/styles.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@
               <div>This is the question part</div>
             </div>
           </div>
-          <div class="row" id="visual" style="display:none">
+          <div class="row" id="visual">
             <div class = "col" id="answer1" style="display:none">
               <div class="row">
                 <div class="col">
@@ -111,12 +112,20 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
       
   <script type="text/javascript">
+  $(function(){
+      let image = './images/canada.png';
+      $("#visual").css("padding-bottom", "40%");
+      $("#visual").css("background-image", 'url("' + image + '")');
+  });
     $('.choices').click(function () {
-      $("#visual").show();
+      $("#visual").addClass('animated');
+      $("#visual").addClass('flip');
+      $("#visual").css("padding-bottom", "inherit");
+      $("#visual").css("background-image", "none");
       $("#answer1").show();
       $("#multiAnswer").hide();
-      $("#next").show()
-      console.log(1)
+      $("#next").show();
+      console.log(1);
     });
     $('iframe').load(function () {
     $('iframe').height($('iframe').contents().height());

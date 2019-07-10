@@ -16,6 +16,7 @@ fetch("./data/sample_questions.json")
         let questions = shuffle(data["questions"]);
         for (let i of questions) {
             $(".answer").hide();
+            console.log(i["question"]);
             document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;
             switch(i["question_type"]){
                 case "M":
