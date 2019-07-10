@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,75 +12,75 @@
 </head>
 
 <body>
-  <div>
-    <div class="row" id= "question">
-      <div class="col">
-        <div>This is the question part</div>
-      </div>
+    <div>
+        <div class="row" id="question">
+            <div class="col">
+                <div>This is the question part</div>
+            </div>
+        </div>
+        <div class="row" id="visual" style="display:none">
+            <div class="col" id="answer1" style="display:none">
+                <div class="row">
+                    <div class="col">
+                        The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="chartContainer"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="question2">
+
+            </div>
+            <div id="answer2">
+
+            </div>
+            <div id="endStateContainer" style="display:none;">
+                endstate
+            </div>
+        </div>
+
+        <div class="answer" id="multiAnswer">
+            <div class="row">
+                <div class="col">
+                    <div class="btn-danger choices">
+                        A
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btn-primary choices">
+                        B
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn-warning choices">
+                        C
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btn-success choices">
+                        D
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="answer" id="next" style="display:none;">
+            <div class="row">
+                <div class="col">
+                    <div class="btn-success choices">
+                        Next Question
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row" id="visual" style="display:none">
-      <div class = "col" id="answer1" style="display:none">
-        <div class="row">
-          <div class="col">
-            The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div id="chartContainer"></div>
-           </div>
-        </div>
-      
-      </div>
-      <div id="question2">
   
-      </div>
-      <div id="answer2">
-  
-      </div>
-      <div id="endStateContainer" style="display:none;">
-        endstate
-      </div>
-    </div>
-    
-    <div class= "answer" id="multiAnswer">
-        <div class="row">
-            <div class="col">
-              <div class="btn-danger choices">
-                A
-              </div>
-            </div>
-            <div class="col">
-              <div class="btn-primary choices">
-                B
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="btn-warning choices">
-                C
-              </div>
-            </div>
-            <div class="col">
-              <div class="btn-success choices">
-                D
-              </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    <div class= "answer" id="next" style="display:none;">
-      <div class="row">
-          <div class="col">
-            <div class="btn-success choices">
-              Next Question
-            </div>
-          </div>
-      </div>
-  </div>
-    
-  </div>
 </body>
 
 </html>
@@ -125,7 +125,7 @@
             theme: 'theme1',//theme1
             height: 300,
             title: {
-                text: 'Sea Ice'
+                text: 'Canadian Artic Sea Ice Volume'
             },
             data: [
                 {
