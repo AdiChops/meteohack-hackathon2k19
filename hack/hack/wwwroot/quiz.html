@@ -19,10 +19,18 @@
       </div>
     </div>
     <div class="row" id="visual" style="display:none">
-      <div id="answer1" style="display:none">
-        The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
-        <div id="chartContainer"></div>
-        <button id="gotToQ2" type="button" class="btn btn-success">Question 2</button>
+      <div class = "col" id="answer1" style="display:none">
+        <div class="row">
+          <div class="col">
+            The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div id="chartContainer"></div>
+           </div>
+        </div>
+      
       </div>
       <div id="question2">
   
@@ -35,7 +43,7 @@
       </div>
     </div>
     
-    <div id= "answer">
+    <div class= "answer" id="multiple">
         <div class="row">
             <div class="col">
               <div class="btn-danger choices">
@@ -61,6 +69,15 @@
             </div>
         </div>
     </div>
+    <div class= "answer" id="next" style="display:none;">
+      <div class="row">
+          <div class="col">
+            <div class="btn-success choices">
+              Next Question
+            </div>
+          </div>
+      </div>
+  </div>
     
   </div>
 </body>
@@ -78,6 +95,8 @@
     $('.choices').click(function () {
        $("#visual").show();
         $("#answer1").show();
+        $("#multiple").hide();
+        $("#next").show()
         console.log(1)
     });
 

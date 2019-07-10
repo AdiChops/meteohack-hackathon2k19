@@ -28,7 +28,7 @@ html, body{
     width: 105%;
   
 }
-#answer{
+.answer{
     /* height: 50%; */
     background-color: rgba(1, 1, 1, 0.65);
     padding: 2%;
