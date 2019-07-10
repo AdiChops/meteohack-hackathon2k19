@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,38 +118,6 @@
       $("#next").show()
       console.log(1)
     });
-    var dataPoints = [];
-    var jqxhr = $.get("https://www.canada.ca/content/dam/eccc/documents/csv/cesindicators/sea-ice/2019/3.SeaIce-MultiYear-EN.csv", function () {
-    }).done(function (data) {
-      processData(data);
-    });
-    function processData(allText) {
-      var allLinesArray = allText.split('\n');
-      if (allLinesArray.length > 0) {
-        for (var i = 3; i <= 51; i++) {
-          var rowData = allLinesArray[i].split(',');
-          dataPoints.push({ label: rowData[0], y: parseInt(rowData[1]) });
-        }
-        console.log($("#answer1").height)
-        drawChart(dataPoints);
-      }
-    }
-    function drawChart(dataPoints) {
-      var chart = new CanvasJS.Chart('chartContainer', {
-        theme: 'theme1',//theme1
-        title: {
-          text: 'Sea Ice'
-        },
-        data: [
-          {
-            type: "line",
-            dataPoints: dataPoints
-          }
-        ]
-       });
-       chart.render();
-    };
-      
 </script>
 </body>
 </html>
