@@ -34,8 +34,8 @@
           <div class="row" id="visual">
             <div class = "col" id="answer1" style="display:none">
               <div class="row">
-                <div class="col">
-                  The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
+                <div class="col" id="desc">
+                  
                 </div>
               </div>
               <div class="row">
@@ -123,10 +123,13 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
       
   <script type="text/javascript">
-  $(function(){
+  function reset(){
       let image = './images/canada.png';
       $("#visual").css("padding-bottom", "30%");
       $("#visual").css("background-image", 'url("' + image + '")');
+  }
+  $(function(){
+    reset();
   });
    
 </script>
