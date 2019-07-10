@@ -14,6 +14,9 @@ html, body{
     font-size: 2em;
     overflow-x: hidden;
 }
+.nav{
+    padding:-90%;
+}
 #question{
     /* display:flex;
     height:50%; */
@@ -22,7 +25,7 @@ html, body{
     background-color: rgba(255, 255, 255, 0.65);
     justify-content: center;
     align-items: center;
-    padding: 3% 5% 3% 5%;
+    padding: 1%;
     width: 105%;
   
 }
@@ -53,4 +56,8 @@ html, body{
 }
 iframe{
     width:90%;
+}
+
+.nav{
+    font-size:0.5em;
 }
