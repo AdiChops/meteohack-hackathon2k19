@@ -25,6 +25,17 @@
         {
             "question":"Sample Question",
             "question_type":"S"
+        },
+        {
+            "question":"Which city in Ontario has the worst air quality in 2019?",
+            "answers":[
+                "Ottawa",
+                "Toronto",
+                "Kitchener",
+                "Newmarket"
+            ],
+            "correct":"Newmarket",
+            "question_type":"M"
         }
     ]
 }
