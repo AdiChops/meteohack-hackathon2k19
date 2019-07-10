@@ -15,16 +15,22 @@ fetch("../data/sample_questions.json")
         console.log(data);
         let questions = shuffle(data["questions"]);
         for (let i of questions) {
+            $(".answer").hide();
             document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;
-            if (i["question_type"] == "M") {
-                document.querySelector('#multiAnswer').style.display="block"
-                let answers = i["answers"];
-                console.log(answers);
-                answers = shuffle(answers);
-                console.log(answers);
-            }
-            else{
-                document.querySelector('#multiAnswer').style.display="none";
+            switch(i["question_type"]){
+                case "M":
+                    document.querySelector('#multiAnswer').style.display="block";
+                    let answers = i["answers"];
+                    console.log(answers);
+                    answers = shuffle(answers);
+                    console.log(answers);
+                    break;
+                case "S":
+                    $("#shortAns").show();
+                    break;
+                case "T":
+                    $("#trueFalse").show();
+                    break;
             }
         }
     });

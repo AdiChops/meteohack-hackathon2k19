@@ -12,7 +12,6 @@ html, body{
     background-size: cover;
     text-align:center;
     font-size: 2em;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 #question{
@@ -40,7 +39,7 @@ html, body{
 
  #visual{
     padding: 3% 5% 3% 5%;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(1, 1, 1, 0.35);
     height:70%;
 }
 
@@ -48,4 +47,7 @@ html, body{
     margin:0.5%;
     border-radius: 5px;
     padding:1%;
+}
+iframe{
+    width:90%;
 }
