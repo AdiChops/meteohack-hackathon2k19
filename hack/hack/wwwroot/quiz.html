@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="row" id="visual">
-            <div class = "col" id="answer1" style="display:none">
+            <div class = "col" id="answer1" >
               <div class="row">
                 <div class="col" id="desc">
                   
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="btn-Warning choices">
+                <div class="btn-danger choices">
                     False
                 </div>
             </div>
@@ -124,14 +124,35 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
       
   <script type="text/javascript">
-  function reset(){
-      let image = './images/canada.png';
-      $("#visual").css("padding-bottom", "30%");
-      $("#visual").css("background-image", 'url("' + image + '")');
-  }
-  $(function(){
-    reset();
-  });
+  // function reset(){
+  //     $("#visual").html(`
+  //                 <div class = "col" id="answer1">
+  //             <div class="row">
+  //               <div class="col" id="desc">
+                  
+  //               </div>
+  //             </div>
+  //             <div class="row">
+  //               <div class="col">
+  //                 <iframe src="./chart.html" HEIGHT=420 style="display:none" id="chart"></iframe>
+  //                 <iframe src="./map/dist/index.html" HEIGHT=420 style="display:none" id="map"></iframe>
+  //               </div>
+  //             </div>
+  //           </div>
+  //           <div id="question2">
+
+  //           </div>
+  //           <div id="answer2">
+
+  //           </div>
+  //           <div id="endStateContainer" style="display:none;">
+  //               endstate
+  //           </div>`);
+      
+  // }
+  // $(function(){
+  //   reset();
+  // });
    
 </script>
 </body>

@@ -14,9 +14,9 @@
             "description":"The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment."
         },
         {
-            "question":"Sample Question",
-            "question_type":"S",
-            "correct":"lop",
+            "question":"Overconsumption of meat contributes to GHG. True or False?",
+            "question_type":"T",
+            "correct":"True",
             "media":"None",
             "description":"This is Test."
 
@@ -45,7 +45,7 @@
             "correct": "3",
             "media":"map",
             "question_type": "M",
-            "description":"This map shows the Air Temperature."
-          } 
+            "description":"This answer was 3."
+        } 
     ]
 }

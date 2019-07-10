@@ -6,14 +6,14 @@ function customAlert(msg,callback) {
     // in this case its just a console log
     
     $("iframe").hide()
-   
+    $("#desc").text("");
+    if ("map" ==msg[num]["media"]){
+        $("#map").show();
+    }
     if(msg[num]["question_type"] != "S"){
         $('.choices').click(function () {
-            if ("map" ==msg[num-1]["media"]){
-                $("#map").show();
-            }
-        
-            else if("chart" ==msg[num-1]["media"]){
+            $("#map").hide();
+            if("chart" ==msg[num-1]["media"]){
                 $("#chart").show();
             }
             console.log(num)
@@ -36,6 +36,8 @@ function customAlert(msg,callback) {
             $("#btnNext").click(function(){
                 $('.choices').off("click")
                 $('#btnNext').off("click")
+                $("#visual").removeClass('animated');
+                $("#visual").removeClass('flip');
                 callback(msg);
             })
 
@@ -44,11 +46,8 @@ function customAlert(msg,callback) {
     }
     else{
         $('#submit').click(function () {
-            if ("map" ==msg[num-1]["media"]){
-                $("#map").show();
-            }
-        
-            else if("chart" ==msg[num-1]["media"]){
+            $("#map").hide();
+            if("chart" ==msg[num-1]["media"]){
                 $("#chart").show();
             }
             if ($("#ans").val().toLowerCase() ==msg[num-1]["correct"].toString().toLowerCase()){
@@ -66,8 +65,10 @@ function customAlert(msg,callback) {
             $("#next").show()
            
             $("#btnNext").click(function(){
-                $('.choices').off("click")
-                $('#btnNext').off("click")
+                $('.choices').off("click");
+                $('#btnNext').off("click");
+                $("#visual").removeClass('animated');
+                $("#visual").removeClass('flip');
                 callback(msg);
             })
         });
@@ -78,7 +79,15 @@ function customAlert(msg,callback) {
     
 }
 let loopQuestions = function(arr){
+    
+    
     console.log(num)
+    if (num<arr.length){
+        if ("map" !=arr[num]["media"]){
+            let image = './images/canada.png';
+            $("#visual").css("padding-bottom", "30%");
+            $("#visual").css("background-image", 'url("' + image + '")');
+        }
     $(".answer").hide();
     document.querySelector("#question").innerHTML = `<p>${arr[num]["question"]}</p>`;
     switch(arr[num]["question_type"]){
@@ -99,11 +108,15 @@ let loopQuestions = function(arr){
             $("#trueFalse").show();
             break;
         }
-        if (num<arr.length){
+        
             customAlert(arr,loopQuestions)
             console.log(33)
             num ++;
         }
+        else{
+            window.location="./endState.html";
+        }
+
         
    
 }
