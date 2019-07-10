@@ -57,3 +57,7 @@ html, body{
 iframe{
     width:90%;
 }
+
+.nav{
+    font-size:0.5em;
+}
