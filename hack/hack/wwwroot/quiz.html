@@ -43,7 +43,7 @@
                         <iframe src="./chart.html" HEIGHT=420></iframe>
                     </div>
                 </div>
-
+              </div>
             </div>
             <div id="question2">
 
@@ -83,7 +83,7 @@
           </div>
         </div>
     </div>
-    <div class= "answer" id="next" style="display:none;">
+    <div class= "answer" id="next">
       <div class="row">
           <div class="col">
             <div class="btn-success choices" id="btnNext">
@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-    <div class="answer" id="trueFalse" style="display:none;">
+    <div class="answer" id="trueFalse" >
         <div class="row">
             <div class="col">
                 <div class="btn-success choices">
@@ -105,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="answer" id="shortAns" style="display:none;">
+    <div class="answer" id="shortAns" >
         <div class="row">
             <div class="col-9">
                 <input type="text" class="form-control" id="ans" placeholder="Your answer">
@@ -127,16 +127,7 @@
       $("#visual").css("padding-bottom", "40%");
       $("#visual").css("background-image", 'url("' + image + '")');
   });
-    $('.choices').click(function () {
-      $("#visual").addClass('animated');
-      $("#visual").addClass('flip');
-      $("#visual").css("padding-bottom", "inherit");
-      $("#visual").css("background-image", "none");
-      $("#answer1").show();
-      $("#multiAnswer").hide();
-      $("#next").show();
-      console.log(1);
-    });
+   
 </script>
 </body>
 </html>
