@@ -17,7 +17,7 @@ fetch("./data/sample_questions.json")
         for (let i of questions) {
             $(".answer").hide();
             console.log(i["question"]);
-            document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;
+           /* document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;*/
             switch(i["question_type"]){
                 case "M":
                     document.querySelector('#multiAnswer').style.display="block";
