@@ -38,15 +38,12 @@ html, body{
     
 }
 
-<<<<<<< HEAD
-=======
  #visual{
     padding: 3% 5% 3% 5%;
     background-color: rgba(255,255,255,1);
     height:70%;
 }
 
->>>>>>> f6cacb875a342fb9cb9962961a032490a0936440
 .choices{
     margin:0.5%;
     border-radius: 5px;
