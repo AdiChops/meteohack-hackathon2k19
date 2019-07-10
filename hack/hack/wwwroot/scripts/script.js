@@ -6,7 +6,10 @@ function customAlert(msg,callback) {
     // in this case its just a console log
     console.log(msg);
     $('.choices').click(function () {
-        $("#visual").show();
+        $("#visual").addClass('animated');
+        $("#visual").addClass('flip');
+        $("#visual").css("padding-bottom", "inherit");
+        $("#visual").css("background-image", "none");
         $("#answer1").show();
         $("#multiAnswer").hide();
         $("#next").show()
