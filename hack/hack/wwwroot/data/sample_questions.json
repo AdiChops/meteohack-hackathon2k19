@@ -5,24 +5,37 @@
             "answers": [
                 21,
                 33,
-                400
+                400,
+                123
             ],
+            "correct":123,
             "question_type":"M"
         },
         {
-            "question":"On average, how much decline in volume has the Canadian Artic sea ice experienced per decade since 1968?",
+            "question":"On average, how much decline in volume has the Canadian Arctic sea ice experienced per decade since 1968?",
             "answers":[
                 "None, it remains constant.",
-                "A little, but nothing to be concerned about.",
                 "-2.3%",
                 "-5.1%",
                 "-7.4%"
             ],
+            "correct":"-7.4%",
             "question_type":"M"
         },
         {
             "question":"Sample Question",
             "question_type":"S"
+        },
+        {
+            "question":"Which city in Ontario has the worst air quality in 2019?",
+            "answers":[
+                "Ottawa",
+                "Toronto",
+                "Kitchener",
+                "Newmarket"
+            ],
+            "correct":"Newmarket",
+            "question_type":"M"
         }
     ]
 }

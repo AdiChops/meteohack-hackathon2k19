@@ -14,16 +14,18 @@ html, body{
     font-size: 2em;
     overflow-x: hidden;
 }
+.nav{
+    padding:-90%;
+}
 #question{
     /* display:flex;
     height:50%; */
     line-height:100%;
     text-transform: uppercase;
-    background-color:white;
-    opacity:0.65;
+    background-color: rgba(255, 255, 255, 0.65);
     justify-content: center;
     align-items: center;
-    padding: 3% 5% 3% 5%;
+    padding: 1%;
     width: 105%;
   
 }
@@ -38,9 +40,11 @@ html, body{
 }
 
  #visual{
+    background-repeat: no-repeat;
+    background-position:center;
     padding: 1.5%;
     background-color: rgba(255, 255, 255, 008);
-    height:70%;
+    height:70%!important;
     border-radius: 50px;
     margin:1%;
 }
@@ -52,4 +56,8 @@ html, body{
 }
 iframe{
     width:90%;
+}
+
+.nav{
+    font-size:0.5em;
 }

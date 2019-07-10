@@ -4,22 +4,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel = "stylesheet" type = "text/css" href = "styles/styles.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Quiz</title>
 </head>
 
 <body>
-  <div id="content">
-    <html>
-        <div class="row" id= "question">
+
+    <ul class="nav" style="background-color:white">
+        <li class="nav-item">
+            <a class="nav-link active" href="Index.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="endState.html">End State</a>
+        </li>
+    </ul>
+
+    <div id="content">
+        <div class="row" id="question">
             <div class="col">
-              <div>This is the question part</div>
+              <div></div>
             </div>
           </div>
-          <div class="row" id="visual" style="display:none">
+          <div class="row" id="visual">
             <div class = "col" id="answer1" style="display:none">
               <div class="row">
                 <div class="col">
@@ -28,99 +40,95 @@
               </div>
               <div class="row">
                 <div class="col">
-                    <iframe src="./chart.html" HEIGHT = 420></iframe>
-                 </div>
+                  <iframe src="./chart.html" HEIGHT=420></iframe>
+                </div>
               </div>
-            
             </div>
             <div id="question2">
-        
+
             </div>
             <div id="answer2">
-        
+
             </div>
             <div id="endStateContainer" style="display:none;">
-              endstate
+                endstate
             </div>
           </div>
-    </html>
+
     
     
     <div class= "answer" id="multiAnswer"  style="display:none;">
       <div class="row">
         <div class="col">
-          <div class="btn-danger choices">
+          <div class="btn-danger choices" id="choice0">
             A
           </div>
         </div>
         <div class="col">
-          <div class="btn-primary choices">
+          <div class="btn-primary choices" id="choice1">
             B
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <div class="btn-warning choices">
+          <div class="btn-warning choices" id="choice2">
             C
           </div>
         </div>
         <div class="col">
-          <div class="btn-success choices">
+          <div class="btn-success choices" id="choice3">
             D
           </div>
         </div>
       </div>
     </div>
-    <div class= "answer" id="next" style="display:none;">
+    <div class= "answer" id="next">
       <div class="row">
           <div class="col">
-            <div class="btn-success choices">
+            <div class="btn-success choices" id="btnNext">
               Next Question
             </div>
           </div>
       </div>
     </div>
-    <div class= "answer" id="trueFalse" style="display:none;">
-      <div class="row">
-        <div class="col">
-          <div class="btn-success choices">
-            True
-          </div>
+    <div class="answer" id="trueFalse" >
+        <div class="row">
+            <div class="col">
+                <div class="btn-success choices">
+                    True
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-Warning choices">
+                    False
+                </div>
+            </div>
         </div>
-        <div class="col">
-          <div class="btn-Warning choices">
-            False
-          </div>
-        </div>
-      </div>
     </div>
-    <div class= "answer" id="shortAns" style="display:none;">
-      <div class="row">
-        <div class = "col-9">
-          <input type="text" class="form-control" id="ans" placeholder="Your answer">
+    <div class="answer" id="shortAns" >
+        <div class="row">
+            <div class="col-9">
+                <input type="text" class="form-control" id="ans" placeholder="Your answer">
+            </div>
+            <div class="col-3">
+                <input type="button" class="btn btn-success" id="ans" value="Submit">
+            </div>
         </div>
-        <div class = "col-3">
-          <input type="button" class="btn btn-success" id="ans" value="Submit">
-        </div>
-      </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="scripts/script.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
       
   <script type="text/javascript">
-    $('.choices').click(function () {
-      $("#visual").show();
-      $("#answer1").show();
-      $("#multiAnswer").hide();
-      $("#next").show()
-      console.log(1)
-    });
-    $('iframe').load(function () {
-    $('iframe').height($('iframe').contents().height());
-});
+  $(function(){
+      let image = './images/canada.png';
+      $("#visual").css("padding-bottom", "30%");
+      $("#visual").css("background-image", 'url("' + image + '")');
+  });
+   
 </script>
 </body>
 </html>
