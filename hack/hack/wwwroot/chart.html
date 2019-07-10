@@ -42,7 +42,6 @@
           var rowData = allLinesArray[i].split(',');
           dataPoints.push({ label: rowData[0], y: parseInt(rowData[1]) });
         }
-        console.log($("#answer1").height)
         drawChart(dataPoints);
       }
     }
