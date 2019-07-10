@@ -4,8 +4,18 @@ let num = 0;
 function customAlert(msg,callback) {
     // code to show your custom alert
     // in this case its just a console log
+    
+    $("iframe").hide()
+   
     if(msg[num]["question_type"] != "S"){
         $('.choices').click(function () {
+            if ("map" ==msg[num-1]["media"]){
+                $("#map").show();
+            }
+        
+            else if("chart" ==msg[num-1]["media"]){
+                $("#chart").show();
+            }
             console.log(num)
             if ($(this).text() ==msg[num-1]["correct"]){
                 document.querySelector("#question").innerHTML = `<p>Correct!</p>`;
@@ -19,6 +29,8 @@ function customAlert(msg,callback) {
             $("#visual").css("background-image", "none");
             $("#answer1").show();
             $(".answer").hide();
+            $("#desc").text(msg[num-1]["description"]);
+
             $("#next").show()
            
             $("#btnNext").click(function(){
@@ -26,11 +38,19 @@ function customAlert(msg,callback) {
                 $('#btnNext').off("click")
                 callback(msg);
             })
+
            
           });
     }
     else{
         $('#submit').click(function () {
+            if ("map" ==msg[num-1]["media"]){
+                $("#map").show();
+            }
+        
+            else if("chart" ==msg[num-1]["media"]){
+                $("#chart").show();
+            }
             if ($("#ans").val().toLowerCase() ==msg[num-1]["correct"].toString().toLowerCase()){
                 document.querySelector("#question").innerHTML = `<p>Correct!</p>`;
             }
