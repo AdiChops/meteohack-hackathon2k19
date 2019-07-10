@@ -38,9 +38,11 @@ html, body{
 }
 
  #visual{
-    padding: 3% 5% 3% 5%;
-    background-color: rgba(1, 1, 1, 0.35);
+    padding: 1.5%;
+    background-color: rgba(255, 255, 255, 008);
     height:70%;
+    border-radius: 50px;
+    margin:1%;
 }
 
 .choices{

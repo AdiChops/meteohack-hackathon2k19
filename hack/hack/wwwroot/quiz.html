@@ -28,7 +28,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                    <iframe src="./chart.html"></iframe>
+                    <iframe src="./chart.html" HEIGHT = 420></iframe>
                  </div>
               </div>
             
@@ -118,6 +118,9 @@
       $("#next").show()
       console.log(1)
     });
+    $('iframe').load(function () {
+    $('iframe').height($('iframe').contents().height());
+});
 </script>
 </body>
 </html>
