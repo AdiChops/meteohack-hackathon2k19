@@ -61983,7 +61983,7 @@ var map = new _ol2.Map({
 map.layers = [openStreetMap, climateStations]; //window.map = map;
 //window.climateStations = climateStations;
 
-function displayLayer(name, legend) {
+function displayLayer(name, title, legend) {
   //map.removeLayer(climateStations);
   map.addLayer(new _Tile.default({
     source: new _TileWMS.default({
@@ -61997,19 +61997,20 @@ function displayLayer(name, legend) {
     }),
     opacity: 0.5
   }));
-  alert(name);
+  $("#title").text(title);
+  $("#legend").attr("src", legend);
 }
 
 function addChildLayers(container, layerNode) {
   if (layerNode.children("Layer").length === 0) {
     var title = layerNode.children("Title").text();
-    var name = layerNode.children("Name").text(); //var legend = layerNode.children("
-    //console.log("Title: ", title, "Name: ", name);
+    var name = layerNode.children("Name").text();
+    var legend = layerNode.find("LegendURL > OnlineResource").attr("xlink:href"); //console.log("Title: ", title, "Name: ", name);
 
     var li = $("<li>" + title + "</li>");
     var button = $("<button>Select</button>");
     button.click(function () {
-      displayLayer(name);
+      displayLayer(name, title, legend);
     });
     li.append(button);
     container.append(li); //li.append("<span class='caret'>" + title + "</span>");
@@ -62078,7 +62079,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51587" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63714" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
