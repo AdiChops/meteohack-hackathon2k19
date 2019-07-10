@@ -5,14 +5,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel = "stylesheet" type = "text/css" href = "styles/styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Quiz</title>
 </head>
 
 <body>
-  <div id="question"></div>
-  <div id="answer"></div>
+  <div>
+    <div class="row" id= "question">
+      <div class="col">
+        <div>This is the question part</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" id="image">
+
+      </div>
+    </div>
+    <div id= "answer">
+        <div class="row">
+            <div class="col">
+              <div class="btn-danger choices">
+                A
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-primary choices">
+                B
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="btn-warning choices">
+                C
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-success choices">
+                D
+              </div>
+            </div>
+        </div>
+    </div>
+    
+  </div>
   <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 
 </html>
+

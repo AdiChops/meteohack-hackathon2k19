@@ -14,16 +14,30 @@ html, body{
     font-size: 2em;
 }
 #question{
-    display:flex;
-    height:50%;
+    /* display:flex;
+    height:50%; */
     line-height:100%;
     text-transform: uppercase;
     background-color:white;
     opacity:0.65;
     justify-content: center;
     align-items: center;
+    padding: 1%;
+    Padding-top: 3%;
+    Padding-bottom: 3%;
 }
 #answer{
-    height: 50%;
-    border: solid 1px red;
+    /* height: 50%; */
+    background-color: rgba(1, 1, 1, 0.65);
+    padding: 1%;
+}
+
+ #image{
+    height: 62vh;
+}
+
+.choices{
+    margin:0.5%;
+    border-radius: 5px;
+    padding:1%;
 }
