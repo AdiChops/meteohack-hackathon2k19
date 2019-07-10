@@ -17,10 +17,14 @@ fetch("../data/sample_questions.json")
         for (let i of questions) {
             document.querySelector("#question").innerHTML = `<p>${i["question"]}</p>`;
             if (i["question_type"] == "M") {
+                document.querySelector('#multiAnswer').style.display="block"
                 let answers = i["answers"];
                 console.log(answers);
                 answers = shuffle(answers);
                 console.log(answers);
+            }
+            else{
+                document.querySelector('#multiAnswer').style.display="none";
             }
         }
     });

@@ -43,7 +43,7 @@
       </div>
     </div>
     
-    <div class= "answer" id="multiple">
+    <div class= "answer" id="multiAnswer">
         <div class="row">
             <div class="col">
               <div class="btn-danger choices">
@@ -67,6 +67,7 @@
                 D
               </div>
             </div>
+        </div>
         </div>
     </div>
     <div class= "answer" id="next" style="display:none;">
@@ -95,7 +96,7 @@
     $('.choices').click(function () {
        $("#visual").show();
         $("#answer1").show();
-        $("#multiple").hide();
+        $("#multiAnswer").hide();
         $("#next").show()
         console.log(1)
     });
