@@ -12,6 +12,8 @@ html, body{
     background-size: cover;
     text-align:center;
     font-size: 2em;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 #question{
     /* display:flex;
@@ -22,18 +24,21 @@ html, body{
     opacity:0.65;
     justify-content: center;
     align-items: center;
-    padding: 1%;
-    Padding-top: 3%;
-    Padding-bottom: 3%;
+    position: fixed; 
+    padding: 3% 5% 3% 5%;
+    width: 105%;
+  
 }
 #answer{
     /* height: 50%; */
     background-color: rgba(1, 1, 1, 0.65);
-    padding: 1%;
+    padding: 2%;
+    position: fixed; 
+    bottom:0%;
+    width:100%;
 }
 
  #image{
-    height: 62vh;
 }
 
 .choices{
