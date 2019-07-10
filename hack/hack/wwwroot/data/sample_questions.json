@@ -14,13 +14,14 @@
         {
             "question":"On average, how much decline in volume has the Canadian Arctic sea ice experienced per decade since 1968?",
             "answers":[
-                "None, it remains constant.",
+                "A little, but nothing to be concerned about.",
                 "-2.3%",
                 "-5.1%",
                 "-7.4%"
             ],
             "correct":"-7.4%",
-            "question_type":"M"
+            "question_type":"M",
+            "description":"The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment."
         },
         {
             "question":"Sample Question",

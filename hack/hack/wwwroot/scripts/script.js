@@ -22,8 +22,8 @@ function customAlert(msg,callback) {
         $("#next").show()
        
         $("#btnNext").click(function(){
-            $('.choices').off("click")
-            $('#btnNext').off("click")
+            $('.choices').off("click");
+            $('#btnNext').off("click");
             callback(msg);
         })
        
