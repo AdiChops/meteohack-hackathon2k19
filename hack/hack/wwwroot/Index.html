@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MeteoHack</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">End State</a>
+        </li>
+    </ul>
+    <div id="about">
+
+    </div>
+
+    <div id="quiz">
+
+    </div>
+
+    <div id="endState">
+
+    </div>
+
+
+    <div id="chartContainer"></div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+
+<script type="text/javascript">
+
+    var dataPoints = [];
+    var jqxhr = $.get("https://www.canada.ca/content/dam/eccc/documents/csv/cesindicators/sea-ice/2019/3.SeaIce-MultiYear-EN.csv", function () {
+    }).done(function (data) {
+        processData(data);
+    });
+
+    function processData(allText) {
+        var allLinesArray = allText.split('\n');
+        if (allLinesArray.length > 0) {
+            for (var i = 3; i <= 51; i++) {
+                var rowData = allLinesArray[i].split(',');
+                dataPoints.push({ label: rowData[0], y: parseInt(rowData[1]) });
+            }
+            drawChart(dataPoints);
+        }
+    }
+
+    function drawChart(dataPoints) {
+        var chart = new CanvasJS.Chart('chartContainer', {
+            theme: 'theme1',//theme1
+            title: {
+                text: 'Sea Ice'
+            },
+            data: [
+                {
+                    type: "line",
+                    dataPoints: dataPoints
+                }
+            ]
+        });
+        chart.render();
+    };
+
+</script>
