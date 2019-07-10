@@ -18,11 +18,23 @@
         <div>This is the question part</div>
       </div>
     </div>
-    <div class="row">
-      <div class="col" id="image">
-
+    <div class="row" id="visual" style="display:none">
+      <div id="answer1" style="display:none">
+        The chart shows the downward trend in sea ice from 1968. To lose 7.4% of volume per decade is a substantial amount and has devastating effects to the environment.
+        <div id="chartContainer"></div>
+        <button id="gotToQ2" type="button" class="btn btn-success">Question 2</button>
+      </div>
+      <div id="question2">
+  
+      </div>
+      <div id="answer2">
+  
+      </div>
+      <div id="endStateContainer" style="display:none;">
+        endstate
       </div>
     </div>
+    
     <div id= "answer">
         <div class="row">
             <div class="col">
@@ -51,8 +63,59 @@
     </div>
     
   </div>
-  <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 
 </html>
+
+  <script src="scripts/script.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+
+
+    $('.choices').click(function () {
+       $("#visual").show();
+        $("#answer1").show();
+        console.log(1)
+    });
+
+    
+    var dataPoints = [];
+    var jqxhr = $.get("https://www.canada.ca/content/dam/eccc/documents/csv/cesindicators/sea-ice/2019/3.SeaIce-MultiYear-EN.csv", function () {
+    }).done(function (data) {
+        processData(data);
+    });
+
+    function processData(allText) {
+        var allLinesArray = allText.split('\n');
+        if (allLinesArray.length > 0) {
+            for (var i = 3; i <= 51; i++) {
+                var rowData = allLinesArray[i].split(',');
+                dataPoints.push({ label: rowData[0], y: parseInt(rowData[1]) });
+            }
+            console.log($("#answer1").height)
+            drawChart(dataPoints);
+        }
+    }
+
+    function drawChart(dataPoints) {
+        var chart = new CanvasJS.Chart('chartContainer', {
+            theme: 'theme1',//theme1
+            height: 300,
+            title: {
+                text: 'Sea Ice'
+            },
+            data: [
+                {
+                    type: "line",
+                    dataPoints: dataPoints
+                }
+            ]
+        });
+        chart.render();
+    };
+
+</script>
 

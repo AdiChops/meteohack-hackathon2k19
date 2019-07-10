@@ -24,7 +24,6 @@ html, body{
     opacity:0.65;
     justify-content: center;
     align-items: center;
-    position: fixed; 
     padding: 3% 5% 3% 5%;
     width: 105%;
   
@@ -36,9 +35,13 @@ html, body{
     position: fixed; 
     bottom:0%;
     width:100%;
+    
 }
 
- #image{
+ #visual{
+    padding: 3% 5% 3% 5%;
+    background-color: rgba(255,255,255,1);
+    height:70%;
 }
 
 .choices{
